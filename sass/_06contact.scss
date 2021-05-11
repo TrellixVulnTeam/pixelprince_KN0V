@@ -41,7 +41,6 @@
     }
 
     &__title{
-        font-family: font(font-headings-primary);
         font-size: font-size(font-size-large);
         
         @include respond(phone){

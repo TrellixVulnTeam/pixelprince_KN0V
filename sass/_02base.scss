@@ -40,7 +40,13 @@ a{
     color: inherit;
 }
 
-h2,h3 {
+h2{
+    font-family: font(font-headings-primary);
+    text-transform: capitalize;
+    // font-size: font-size(font-size-xl);
+}
+
+h3{
     font-family: font(font-headings-secondary);
     text-transform: capitalize;
 }
