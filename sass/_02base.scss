@@ -43,7 +43,6 @@ a{
 h2{
     font-family: font(font-headings-primary);
     text-transform: capitalize;
-    // font-size: font-size(font-size-xl);
 }
 
 h3{
@@ -71,10 +70,33 @@ h3{
 .section__title{
     text-align: center;
     margin-bottom: space(medium);
+    font-size: font-size(font-size-large);
+    overflow: hidden;
+    
+    @include respond(phone){
+        font-size: font-size(font-size-xl);
+    }
 }
 
 .dollar{
     color: color(color-primary);
+    // border: 2px solid red;
+    display: inline-block;
+    
+    &--1{
+        animation: roll 2s 2 .1s;
+    }
+    &--2{
+        animation: roll 2s 2 .3s;
+    }
+    &--3{
+        animation: roll 2s 2 .5s;
+    }
+}
+
+@keyframes roll{
+    0%{transform: translateY(-7rem);}
+    100%{transform: translateY(7rem);}
 }
 
 .skew--bottom{
