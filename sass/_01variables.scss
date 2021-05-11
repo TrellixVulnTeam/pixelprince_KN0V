@@ -1,0 +1,90 @@
+@font-face {
+  font-family: abuget;
+  src: url(../fonts/Abuget.ttf);
+}
+
+$colors: (
+    "color-primary": #c5ad34,
+    "color-secondary": #407BFF,
+    "color-grey": #7D7D7D,
+    "color-white": #fff,
+    "color-white-1": #f2f2f2,
+);
+
+@function color($color-name){
+    @return map-get($colors , $color-name);
+}
+
+$fonts: (
+    "font-headings-primary": Anton,
+    "font-headings-secondary": Aclonica,
+    "font-text": Ramaraja,
+    "font-h1": abuget,
+);
+
+@function font($font-family){
+    @return map-get($fonts, $font-family);
+};
+
+$font-sizes: (
+    'font-size-small': 1rem,
+    "font-size-medium": 1.6rem,
+    "font-size-large": 3rem,
+    "font-size-xl": 4rem,
+    "font-size-2xl": 5.5rem,
+    "font-size-3xl": 7.5rem,
+    "font-size-4xl": 10.5rem,
+);
+
+@function font-size($size){
+    @return map-get($font-sizes, $size);
+};
+
+$spaces: (
+    "xs": .5rem,
+    "small": 1rem,
+    "medium": 2rem,
+    "large": 3rem,
+    "xl": 4rem,
+);
+
+@function space($size){
+    @return map-get($spaces, $size);
+}
+
+
+@mixin flex-center($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone-small{
+        @media screen and (min-width: 28.15em) {@content;}
+    }
+    @if $breakpoint == phone{
+        @media screen and (min-width: 37.5em) {@content;}
+    }
+
+    @if $breakpoint == phone-land{
+        @media screen and (min-width: 46.87em) {@content;}
+    }
+
+    @if $breakpoint == phone-land-2{
+        @media screen and (min-width: 50em) {@content;}
+    }
+
+    @if $breakpoint == tab-port{
+        @media screen and (min-width: 56.25em) {@content;}
+    }
+    
+    @if $breakpoint == tab-land{
+        @media screen and (min-width: 75em) {@content;}
+    }
+    
+    @if $breakpoint == desktop{
+        @media screen and (max-width: 112.5em) {@content;}
+    }
+}

@@ -1,0 +1,76 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    
+    @include respond(tab-port){
+        font-size: 70%;
+    }
+
+    @include respond(tab-land){
+        font-size: 75%;
+    }
+
+}
+
+body{
+    background: color(color-white-1);
+    font-family: font(font-text);
+    color: color(color-grey);
+    font-size: font-size(font-size-medium);
+    line-height: 1.6;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h2,h3 {
+    font-family: font(font-headings-secondary);
+    text-transform: capitalize;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: [container-start] minmax(2rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(2rem, 1fr) [container-end];
+    grid-template-rows: 100vh;
+}
+
+.skew{
+    grid-column: container-start / container-end;
+    height: 15vw;
+    width: 100%;
+    background: color(color-primary);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+}
+
+
+// utilities
+
+.section__title{
+    text-align: center;
+    margin-bottom: space(medium);
+}
+
+.dollar{
+    color: color(color-primary);
+}
+
+.skew--bottom{
+    transform: rotateZ(180deg);
+}

@@ -1,0 +1,14 @@
+{
+  "name": "pixel-prince",
+  "version": "1.0.0",
+  "description": "pixel prince",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "author": "bala",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

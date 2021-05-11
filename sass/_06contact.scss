@@ -1,0 +1,66 @@
+.contact{
+    grid-column: center-start / center-end;
+
+    @include respond(phone-land){
+        grid-column: col-start 2 / col-end 9;
+    }
+
+    &__icon{
+        width: 40px;
+        height: 40px;
+
+        @include respond(phone){
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+
+        @include respond(phone){
+            &:nth-child(3){
+                margin-left: calc(-15vw);
+            }
+
+            &:nth-child(5){
+                margin-left: calc(15vw);
+            }
+
+            &:nth-child(7){
+                margin-left: calc(-5vw);
+            }
+
+            &:nth-child(9){
+                margin-left: calc(-10vw);
+            }
+        }
+    }
+
+    &__title{
+        font-family: font(font-headings-primary);
+        font-size: font-size(font-size-large);
+        
+        @include respond(phone){
+            font-size: font-size(font-size-2xl);
+        }
+    }
+
+    &__svg{
+        margin-left: -1rem;
+        z-index: -1;
+    }
+
+    &__text{
+        text-transform: capitalize;
+        font-size: font-size(font-size-medium);
+        line-height: 1.1;
+
+        @include respond(phone){
+            font-size: font-size(font-size-large);
+        }
+    }
+}
