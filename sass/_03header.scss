@@ -1,6 +1,6 @@
 .header{
     grid-column: container-start / container-end;
-    background: linear-gradient( rgba(0,0,0,.5) , rgba(0,0,0,.8)), url(../images/FullSizeRender.jpg);
+    background: linear-gradient( rgba(0,0,0,.5) , rgba(0,0,0,.8)), url(../images/FullSizeRender-small-min.jpg);
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
@@ -31,16 +31,17 @@
     }
 
     &__smile{
-        // color: color(color-primary);
+        color: color(color-primary);
         font-family: 'Monoton', cursive;
         font-size: font-size(font-size-xl);
         letter-spacing: .25rem;
         animation: smiling 2.175s forwards;
-        background: linear-gradient(to right, rgba(197, 173, 52, .75) 50%, rgba(255,255,255, 0.7));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+        // background: linear-gradient(to right, rgba(197, 173, 52, .75) 50%, rgba(255,255,255, 0.7));
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // color: transparent;
         text-align: center;
+        
 
         @include respond(phone-small){
             font-size: font-size(font-size-2xl);
@@ -55,16 +56,15 @@
         font-size: font-size(font-size-4xl);
         margin-bottom: -4.35rem;
         }
-       
     }
 
     &__title{
         color: color(color-primary);
         font-family: 'Monoton', cursive;
-        background: linear-gradient(to right, rgba(197, 173, 52, .75) 50%, rgba(255,255,255, 0.7));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+        // background: linear-gradient(to right, rgba(197, 173, 52, .75) 50%, rgba(255,255,255, 0.7));
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // color: transparent;
         animation: show-title 2.75s;
         position: relative;
         z-index: 100;
@@ -95,7 +95,6 @@
     }
     99%{
         opacity: 1;
-        letter-spacing: 1rem;
         transform: scaleX(1.25);
     }
     100%{

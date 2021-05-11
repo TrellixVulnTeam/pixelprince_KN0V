@@ -183,15 +183,17 @@
         height: 100%;
         overflow: hidden;
         cursor: pointer;
-
+        
         &:hover img{
             transform: scale(1.1);
         }
-
+        
         img{
             height: 100%;
             object-fit: cover;
             transition: all .2s;
+            will-change: transform;
+            
         }
     }
 }
